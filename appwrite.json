@@ -1,0 +1,48 @@
+{
+  "functions": [
+    {
+      "name": "createWorkflow",
+      "path": "src/createWorkflow.js"
+    },
+    {
+      "name": "getWorkflow",
+      "path": "src/getWorkflow.js"
+    },
+    {
+      "name": "listWorkflows",
+      "path": "src/listWorkflows.js"
+    },
+    {
+      "name": "updateWorkflow",
+      "path": "src/updateWorkflow.js"
+    },
+    {
+      "name": "deleteWorkflow",
+      "path": "src/deleteWorkflow.js"
+    },
+    {
+      "name": "lockWorkflow",
+      "path": "src/lockWorkflow.js"
+    },
+    {
+      "name": "manageAgents",
+      "path": "src/manageAgents.js"
+    },
+    {
+      "name": "updateUsageStats",
+      "path": "src/updateUsageStats.js"
+    },
+    {
+      "name": "searchWorkflows",
+      "path": "src/searchWorkflows.js"
+    },
+    {
+      "name": "uploadImage",
+      "path": "src/uploadImage.js"
+    },
+    {
+      "name": "updateN8nJson",
+      "path": "src/updateN8nJson.js"
+    }
+  ]
+}
