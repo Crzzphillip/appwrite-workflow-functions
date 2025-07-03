@@ -1,0 +1,13 @@
+{
+  "name": "appwrite-workflow-functions",
+  "version": "1.0.0",
+  "description": "Appwrite Functions for managing workflows in the spacevally database.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.7",
+    "appwrite": "^13.0.0"
+  }
+}
