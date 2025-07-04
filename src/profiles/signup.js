@@ -1,4 +1,5 @@
-import sdk from 'node-appwrite';
+// import sdk from 'node-appwrite';
+const sdk = require('node-appwrite');
 
 export default async ({ req, res }) => {
   try {
