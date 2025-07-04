@@ -1,7 +1,7 @@
 const { databases } = require('./utils');
 const { DATABASE_ID, COLLECTION_ID } = require('./constants');
 
-module.exports = async function (req, res) {
+export default async ({ req, res }) => {
   
   try {
     const { filters = {}, limit = 25, offset = 0, orderField = 'title', orderType = 'ASC' } = req.body || {};
