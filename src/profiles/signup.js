@@ -17,7 +17,7 @@ export default async ({ req, res }) => {
     const storage = new sdk.Storage(client);
 
     const databaseId = process.env.APPWRITE_DATABASE_ID; // e.g. 'spacevally'
-    const profilesCollectionId = process.env.APPWRITE_PROFILES_COLLECTION_ID; // e.g. 'profiles'
+    const profilesCollectionId = process.env.APPWRITE_PROFILES_COLLECTION_ID || 'profiles'; // e.g. 'profiles'
     const avatarBucketId = process.env.APPWRITE_BUCKET_ID; // e.g. 'avatars'
 
     // 1. Check if username exists
