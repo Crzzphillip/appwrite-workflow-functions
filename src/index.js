@@ -8,6 +8,7 @@ const signupModule = require('./profiles/signup');
 // Import all profile functions
 const signup = signupModule.signup;
 console.log('logs:', typeof signup)
+throw Error({message: `logs: typeof functions is : ${typeof signup}`})
 
 // const signup = require('./profiles/signup');
 // const signin = require('./profiles/signin');
