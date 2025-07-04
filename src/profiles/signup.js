@@ -1,5 +1,5 @@
 // import sdk from 'node-appwrite';
-const sdk = require('node-appwrite');
+//const sdk = require('node-appwrite');
 
 export default async function signup({ req, res }) {
   console.log('start')
