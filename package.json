@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Appwrite Functions for managing workflows in the spacevally database.",
   "main": "src/index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"No tests specified\" && exit 0"
   },
