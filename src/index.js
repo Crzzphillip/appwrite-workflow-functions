@@ -6,7 +6,7 @@ const signupModule = require('./profiles/signup');
 
 
 // Import all profile functions
-const signup = signupModule.default;
+const signup = signupModule.signup;
 
 
 // const signup = require('./profiles/signup');
