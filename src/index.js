@@ -1,8 +1,15 @@
 const express = require('express');
 const router = express.Router();
 
+const signupModule = require('./profiles/signup');
+
+
+
 // Import all profile functions
 const signup = require('./profiles/signup');
+const signup = signupModule.default;
+
+
 // const signin = require('./profiles/signin');
 // const googleAuth = require('./profiles/googleAuth');
 // const uploadAvatar = require('./profiles/uploadAvatar');
@@ -18,7 +25,7 @@ const signup = require('./profiles/signup');
 // const listUserProfiles = require('./profiles/listUserProfiles');
 
 // Route definitions
-router.post('/signup', signup);
+ router.post('/signup', signup);
 // router.post('/signin', signin);
 // router.get('/google-auth', googleAuth);
 // router.post('/upload-avatar', uploadAvatar);
