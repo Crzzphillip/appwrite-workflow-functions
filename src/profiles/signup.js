@@ -1,7 +1,7 @@
 // import sdk from 'node-appwrite';
 //const sdk = require('node-appwrite');
 
-export async function signup({ req, res }) {
+export async function signup( req, res ) {
   console.log('start')
   context.log('start')
   try {
