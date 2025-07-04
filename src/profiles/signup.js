@@ -1,4 +1,4 @@
-import sdk from 'node-appwrite';
+import sdk from 'appwrite';
 
 export default async ({ req, res }) => {
   try {
