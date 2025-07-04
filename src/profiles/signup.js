@@ -3,8 +3,10 @@ const sdk = require('node-appwrite');
 
 export default async ({ req, res }) => {
   console.log('start')
+  context.log('start')
   try {
   console.log('in try')
+    context.log('intry')
     const { email, password, name, username, avatar } = req.body;
     if (!email || !password || !name || !username) {
       return res.json({ error: 'Email, password, name, and username are required' }, 400);
@@ -78,6 +80,7 @@ export default async ({ req, res }) => {
     return res.json({ message: 'User created successfully', userId: user.$id }, 201);
   } catch (err) {
   console.log('in error')
+    context.log('in error')
     return res.json({ error: err.message }, 500);
   }
 };
