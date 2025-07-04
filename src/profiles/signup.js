@@ -20,11 +20,26 @@ export default async ({ req, res }) => {
     const profilesCollectionId = process.env.APPWRITE_PROFILES_COLLECTION_ID || 'profiles'; // e.g. 'profiles'
     const avatarBucketId = process.env.APPWRITE_BUCKET_ID; // e.g. 'avatars'
 
-    // 1. Check if username exists
-    const usernameQuery = [sdk.Query.equal('username', username)];
-    const existingProfiles = await databases.listDocuments(databaseId, profilesCollectionId, usernameQuery);
+     // 1. Check if username or email exists
+    const queries = [
+      sdk.Query.or([
+        sdk.Query.equal('username', username),
+        sdk.Query.equal('email', email)
+      ])
+    ];
+    const existingProfiles = await databases.listDocuments(databaseId, profilesCollectionId, queries);
+
     if (existingProfiles.total > 0) {
-      return res.json({ error: 'Username already exists' }, 409);
+      // Find out which field is duplicated for a better error message
+      const duplicate = existingProfiles.documents[0];
+      if (duplicate.username === username) {
+        return res.json({ error: 'Username already exists' }, 409);
+      }
+      if (duplicate.email === email) {
+        return res.json({ error: 'Email already exists' }, 409);
+      }
+      // Fallback
+      return res.json({ error: 'Username or email already exists' }, 409);
     }
 
     // 2. Create user
