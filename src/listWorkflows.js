@@ -19,19 +19,8 @@ module.exports = async function (req, res) {
     queries.push(databases.sdk.Query.orderBy(orderField, orderType));
     const docs = await databases.listDocuments(DATABASE_ID, COLLECTION_ID, queries);
    
-if (res && typeof res.status === 'function') {
-  return res.status(200).json(docs);
-} else {
-  // fallback or throw error
-  throw new Error('Response object is missing or invalid');
-}
+  return res.json(docs,200);
   } catch (err) {
-    
-if (res && typeof res.status === 'function') {
-  return res.status(500).json({ error: err.message });
-} else {
-  // fallback or throw error
-  throw new Error('Response object is missing or invalid');
-}
+  return res.json({ error: err.message },500);
   }
 };
