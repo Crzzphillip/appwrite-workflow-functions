@@ -7,7 +7,7 @@ const signupModule = require('./profiles/signup');
 
 // Import all profile functions
 const signup = signupModule.signup;
-
+context.log('logs:', typeof signup)
 
 // const signup = require('./profiles/signup');
 // const signin = require('./profiles/signin');
