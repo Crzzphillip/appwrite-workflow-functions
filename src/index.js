@@ -6,10 +6,10 @@ const signupModule = require('./profiles/signup');
 
 
 // Import all profile functions
-const signup = require('./profiles/signup');
 const signup = signupModule.default;
 
 
+// const signup = require('./profiles/signup');
 // const signin = require('./profiles/signin');
 // const googleAuth = require('./profiles/googleAuth');
 // const uploadAvatar = require('./profiles/uploadAvatar');
