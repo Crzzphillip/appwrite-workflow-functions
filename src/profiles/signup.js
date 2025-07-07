@@ -3,7 +3,7 @@
 
 export async function signup( req, res ) {
   console.log('start')
-  context.log('start')
+  // context.log('start')
   try {
   // console.log('in try')
   //   context.log('intry')
