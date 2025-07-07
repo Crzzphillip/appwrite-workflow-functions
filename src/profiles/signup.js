@@ -77,10 +77,12 @@ export async function signup( req, res ) {
   //     }
   //   );
 
-    return res.json({ message: 'User created successfully', userId: '12345'/*user.$id*/ }, 201);
+    return { message: 'User created successfully', userId: '12345'/*user.$id*/ };
+      // res.json({ message: 'User created successfully', userId: '12345'/*user.$id*/ }, 201);
   } catch (err) {
   console.log('in error')
-    context.log('in error')
-    return res.json({ error: err.message }, 500);
+    // context.log('in error')
+    return { error: err.message };
+      // res.json({ error: err.message }, 500);
   }
 };
